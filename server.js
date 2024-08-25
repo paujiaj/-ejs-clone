@@ -6,7 +6,7 @@ const util = require("util")
 const exp = require("constants")
 const https = require("https");
 const unlinkFile = util.promisify(fs.unlink)
-const port = 3000
+const port = process.env.PORT || 3000
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
